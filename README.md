@@ -34,7 +34,7 @@ python manage.py runserver
 # Examples
 
 To access the API, you need to get a token:
-You need to make a POST request to localhost:8000/api/v1/token/ passing the username and password fields.
+You need to make a POST request to http://127.0.0.1:8000/api/v1/jwt/create/ passing the username and password fields.
 The API will return a JWT token
 
 Further, by passing the token, it will be possible to access methods, for example:
@@ -42,3 +42,5 @@ Further, by passing the token, it will be possible to access methods, for exampl
 /api/v1/posts/ (GET, POST, PUT, PATCH, DELETE)
 
 When sending a request, pass the token in the header Authorization: Bearer <token>
+
+If you make a request to http://127.0.0.1:8000/redoc , you can get the project specification
