@@ -22,6 +22,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         fields = '__all__'
+        read_only_fields = ('post',)
         model = Comment
 
 
@@ -58,10 +59,5 @@ class FollowSerializer(serializers.ModelSerializer):
 class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
-        fields = (
-            'id',
-            'title',
-            'slug',
-            'description'
-        )
+        fields = '__all__'
         model = Group
